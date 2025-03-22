@@ -65,7 +65,7 @@ const Page = () => {
 
   const swipe = async (dir: string) => {
     await childRefs[currentIndex].current.swipe(dir);
-    window.open(articles[currentIndex].url, '_blank')
+    window.open(articles[currentIndex].url, '_blank');
   };
 
   // increase current index and show card
