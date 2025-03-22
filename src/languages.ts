@@ -1,5 +1,12 @@
 export const LANGUAGES = [
   {
+    id: 'ja',
+    name: '日本語',
+    flag: 'https://hatscripts.github.io/circle-flags/flags/jp.svg',
+    api: 'https://ja.wikipedia.org/w/api.php?',
+    article: 'https://ja.wikipedia.org/wiki/',
+  },
+  {
     id: 'en',
     name: 'English',
     flag: 'https://hatscripts.github.io/circle-flags/flags/us.svg',
@@ -68,13 +75,6 @@ export const LANGUAGES = [
     flag: 'https://hatscripts.github.io/circle-flags/flags/cn.svg',
     api: 'https://zh.wikipedia.org/w/api.php?',
     article: 'https://zh.wikipedia.org/wiki/',
-  },
-  {
-    id: 'ja',
-    name: '日本語',
-    flag: 'https://hatscripts.github.io/circle-flags/flags/jp.svg',
-    api: 'https://ja.wikipedia.org/w/api.php?',
-    article: 'https://ja.wikipedia.org/wiki/',
   },
   {
     id: 'ar',
