@@ -107,21 +107,19 @@ const Page = () => {
         <>
           <Section title="about me">{articles[currentIndex].extract}</Section>
           <Section title="link">
-            <a
-              href={articles[currentIndex].url}
-              className="bg-slate-100 whitespace-pre-line"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <pre className="whitespace-pre-wrap whitespace-break-spaces">{articles[currentIndex].url}</pre>
+            <a href={articles[currentIndex].url} className="whitespace-pre-line" target="_blank" rel="noreferrer">
+              {articles[currentIndex].title} (link)
             </a>
           </Section>
           <Section title="last updated">{formatDate(articles[currentIndex].touched)}</Section>
           <Section title="settings">
-            <LanguageSelector />
+            <div className="w-full justify-end text-right">
+              <LanguageSelector />
+            </div>
           </Section>
         </>
       )}
+      <div className="mb-30"></div>
     </div>
   );
 };
