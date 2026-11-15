@@ -13,7 +13,9 @@ const Article: FC<ArticleProps> = ({ title, content, image }) => {
         {title}
       </h2>
 
-      {image && <img src={image} alt={`Illustration for article: ${title}`} className="article-image" />}
+      {image && (
+        <img src={image} alt={`Illustration for article: ${title}`} className="article-image" />
+      )}
 
       <div className="article-content" role="contentinfo" aria-label="Article content">
         {content}

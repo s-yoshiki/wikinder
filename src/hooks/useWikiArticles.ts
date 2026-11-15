@@ -65,20 +65,23 @@ export function useWikiArticles() {
 
       const data = await response.json();
       const newArticles = Object.values(data.query.pages)
-        .map(
-          (page: any): WikiArticle => ({
-            title: page.title,
-            extract: page.extract,
-            pageid: page.pageid,
-            thumbnail: page.thumbnail,
-            url: page.canonicalurl,
-            touched: page.touched,
-          }),
-        )
-        .filter((article) => article.thumbnail && article.thumbnail.source && article.url && article.extract);
+        .map((page: any): WikiArticle => ({
+          title: page.title,
+          extract: page.extract,
+          pageid: page.pageid,
+          thumbnail: page.thumbnail,
+          url: page.canonicalurl,
+          touched: page.touched,
+        }))
+        .filter(
+          (article) =>
+            article.thumbnail && article.thumbnail.source && article.url && article.extract,
+        );
 
       await Promise.allSettled(
-        newArticles.filter((article) => article.thumbnail).map((article) => preloadImage(article.thumbnail!.source)),
+        newArticles
+          .filter((article) => article.thumbnail)
+          .map((article) => preloadImage(article.thumbnail!.source)),
       );
 
       if (forBuffer) {

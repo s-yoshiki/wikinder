@@ -151,7 +151,12 @@ const Page: React.FC = () => {
         <>
           <Section title="about me">{articles[currentIndex].extract}</Section>
           <Section title="link">
-            <a href={articles[currentIndex].url} className="whitespace-pre-line" target="_blank" rel="noreferrer">
+            <a
+              href={articles[currentIndex].url}
+              className="whitespace-pre-line"
+              target="_blank"
+              rel="noreferrer"
+            >
               {articles[currentIndex].title} (link)
             </a>
           </Section>

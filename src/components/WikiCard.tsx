@@ -89,7 +89,9 @@ export function WikiCard({ article }: WikiCardProps) {
               <button
                 onClick={() => toggleLike(article)}
                 className={`p-2 rounded-full backdrop-blur-sm transition-colors ${
-                  isLiked(article.pageid) ? 'bg-red-500 hover:bg-red-600' : 'bg-white/10 hover:bg-white/20'
+                  isLiked(article.pageid)
+                    ? 'bg-red-500 hover:bg-red-600'
+                    : 'bg-white/10 hover:bg-white/20'
                 }`}
                 aria-label="Like article"
               >
