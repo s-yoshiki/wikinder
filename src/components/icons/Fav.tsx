@@ -29,7 +29,10 @@ const Fav = () => {
 const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
   const { className, ...rest } = props;
   return (
-    <button {...rest} className="w-14 h-14 bg-[#323232] rounded-full flex items-center justify-center ml-5 mr-5">
+    <button
+      {...rest}
+      className={`w-14 h-14 bg-[#323232] rounded-full flex items-center justify-center ml-5 mr-5 ${className ?? ''}`}
+    >
       <Fav />
     </button>
   );

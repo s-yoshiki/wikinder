@@ -21,8 +21,14 @@ export function LanguageSelector() {
   }, []);
 
   return (
-    <div className="relative inline-flex items-center" onClick={() => setShowDropdown(!showDropdown)} ref={dropdownRef}>
-      <button className="text-white text-lg font-bold hover:text-white transition-colors">Language</button>
+    <div
+      className="relative inline-flex items-center"
+      onClick={() => setShowDropdown(!showDropdown)}
+      ref={dropdownRef}
+    >
+      <button className="text-white text-lg font-bold hover:text-white transition-colors">
+        Language
+      </button>
 
       {showDropdown && (
         <div className="absolute overflow-y-auto max-h-[205px] py-2 w-30 right-0 top-full mt-1 bg-gray-900 rounded-md shadow-lg">
